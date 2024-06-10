@@ -32,28 +32,36 @@ def about():
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
+        print("No file part in request")
         return render_template('index.html', result_message='No file uploaded')
     
     file = request.files['file']
     if file.filename == '':
+        print("No file selected")
         return render_template('index.html', result_message='No file selected')
 
     # Save the file
     filepath = os.path.join('uploads', file.filename)
     file.save(filepath)
+    print(f"File saved to {filepath}")
 
     # Prepare the image
-    img_array = prepare_image(filepath)
+    try:
+        img_array = prepare_image(filepath)
+    except Exception as e:
+        print(f"Error preparing image: {e}")
+        return render_template('index.html', result_message='Error preparing image')
 
     # Make prediction
-    prediction = model.predict(img_array)
-    prediction_label = 'positive' if prediction[0][0] > 0.5 else 'normal'
+    try:
+        prediction = model.predict(img_array)
+        prediction_label = 'positive' if prediction[0][0] > 0.5 else 'normal'
+        print(f"Prediction: {prediction_label}")
+    except Exception as e:
+        print(f"Error making prediction: {e}")
+        return render_template('index.html', result_message='Error making prediction')
 
     # Remove the file after prediction
-    os.remove(filepath)
-
-    # Render the result on the results page
-    return render_template('result.html', result_message=prediction_label)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    try:
+        os.remove(filepath)
+        print(f"File {filepath} removed")
