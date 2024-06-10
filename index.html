@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubercuLens</title>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">-->
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>TubercuLens</h1>
+        <h5>Tuberculosis detection and analysis</h5>
+        <a href="about.html" target="_blank" class="about-button">About</a>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Upload Pulmonary Chest X-Ray</h2>
+            <form enctype="multipart/form-data" action="/predict" method="post">
+                <label for="file" class="custom-file-upload">Choose File</label>
+                <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" required>
+                <input type="submit" value="Upload" name="submit">
+            </form>
+        </section>
+
+        <section class="igra">
+            <h2 class="igra">Interferon-Gamma Release Assays (IGRAs) – Blood Tests for TB Infection</h2>
+            <h3 class="igra">IGRA Blood Test Results</h3>
+
+            <div class="igra-dropdown">
+                <button class="igra-button">Choose an option</button>
+                <div class="igra-content">
+                    <a href="#">Positive</a>
+                    <a href="#">Negative</a>
+                    <a href="#">I don't know</a>
+                </div>
+            </div>
+        </section>
+
+        <!--<section>
+            {% if result_message %}
+                <h3>Results:</h3>
+                <p>{{ result_message }}</p>
+            {% endif %}
+        </section>-->
+        
+        <section>
+            <a href="{{ url_for('index') }}" class="back-button">Back</a>
+        </section>
+
+        <h2>
+            Diagnosis
+        </h2>
+        <p>
+            To diagnosis a tuberculosis (TB) infection, your health care provider will do an exam that includes: <br>
+
+- Listening to you breathe with a stethoscope.<br>
+- Checking for swollen lymph nodes.<br>
+- Asking you questions about your symptoms.<br>
+        </p>
+        
+        <h2>
+            TB Tests
+        </h2>
+
+        <p>
+            Your health care provider will order tests if:<br>
+
+- Tuberculosis is suspected.<br>
+- You were likely exposed to a person with active tuberculosis (TB) disease.<br>
+- You have health risks for active  disease.<br>
+
+Your provider will determine whether a skin test or blood test is the best option.
+        </p>
+        
+
+        <h2>
+            Skin Test
+        </h2>
+        <p>
+            A tiny amount of a substance called tuberculin is injected just below the skin on the inside of one forearm. Within 48 to 72 hours, a health care worker will check your arm for swelling (10mm radius)  at the injection site. The size of the raised skin is used to determine a positive or negative test.
+
+This test is seeing if your immune system reacts, or has made an antibody, to tuberculosis. A positive test indicates you likely have either a latent TB infection or active TBdisease. People who had a TBvaccination might get a positive test even if they have no infection.
+
+A negative test means that your body didn't react to the test. It doesn't necessarily mean you don't have an infection.
+
+        </p>
+
+        <h2>Blood Tests</h2>
+        <p>
+            A sample of blood is sent to a lab. One lab test finds out whether certain immune system cells can "recognize" tuberculosis. A positive test shows that you have either a latent TB infection or active TBdisease. Other tests of the blood sample can help determine if you have active disease.
+
+A negative result means you likely do not have a TB infection.
+        </p>
+        <a href="https://www.cdc.gov/tb/publications/factsheets/testing/igra.htm" target="_blank" class="about-button">IGRAs– Blood Tests for TB Infection Fact Sheet</a>
+
+        <h2>
+            X-Ray
+        </h2>
+        <p>
+            A chest X-ray can show irregular patches in the lungs that are typical of active TB disease.
+        </p>
+
+        <h2>
+            Sputum Tests
+        </h2>
+        <p>
+            Your health care provider may take a sample of the mucus that comes up when you cough, also called sputum. If you have active TB disease in your lungs or voice box, lab tests can detect the bacteria.
+
+A relatively quick laboratory test can tell if the sputum likely has the TBbacteria. But it may be showing bacteria with similar features.
+
+Another lab test can confirm the presence of TB bacteria. The results often take several weeks. A lab test also can tell if it's a drug-resistant form of the bacteria. This information helps your health care provider choose the best treatment.
+
+
+        </p>
+
+        <h2>
+            Other Lab Tests
+        </h2>
+
+        <p>
+            Other lab tests that may be ordered include:<br>
+
+- Breath test.<br>
+- Procedure to remove sputum from your lungs with a special tube.<br>
+- Urine test.<br>
+- Test of the fluid around the spine and brain, called cerebrospinal fluid.<br>
+        </p>
+
+        <img src="tb_classificationreport.jpeg" alt="img">
+
+        <h2>Treatment</h2>
+        <p>If you have a latent TB infection, your health care provider may begin drug treatments. This is especially true for people with HIV/AIDS or other factors that increase the risk of active TB disease. Most latent TB infections are treated for three or four months.
+
+            Active TB disease may be treated for four, six or nine months. Specialists in TB treatment will determine which drugs are best for you.
+            
+            You will have regular appointments to see if you're improving and to watch for side effects.
+            
+            </p>
+            <h2>Take all of the drugs</h2>
+            <p>It is important to take every dose as instructed. And you must complete the full course of treatment. This is important for killing the bacteria in your body and preventing new drug-resistant bacteria.
+
+                Your public health department may use a program called directly observed therapy (DOT). With directly observed therapy (DOT), a health care worker visits you at home to watch you take your dose of drugs.
+                
+                Some health care departments have programs that let you take your drugs on your own. The Centers for Disease Control and Prevention has printable forms you can use to keep track of your daily doses.
+                
+                </p>
+            <h2>Most Common TB Drugs</h2>
+            <p>
+                If you have a latent TB infection, you might need to take only one or two types of drugs. Active TB disease requires taking several drugs. Common medications used to treat tuberculosis include:<br>
+
+- Isoniazid.<br>
+- Rifampin (Rimactane).<br>
+- Rifabutin (Mycobutin).<br>
+- Rifapentine (Priftin).<br>
+- Pyrazinamide.<br>
+- Ethambutol (Myambutol).<br>
+
+You may be prescribed other drugs if you have drug-resistant tuberculosis or other complications from your illness.
+            </p>
+
+            <h2>Medication Side Effects
+
+            </h2>
+            <p>
+                Most people can take TB drugs without serious side effects. If you have serious side effects, your care provider may ask you to stop taking a drug. You may have to change the dose of a drug.<br>
+
+Talk to your health care provider if you experience any of the following:<br>
+
+- Upset stomach.<br>
+- Vomiting.<br>
+- Loss of appetite.<br>
+- Severe diarrhea.<br>
+- Light-colored stool.<br>
+- Dark urine.<br>
+- Yellowish skin or eye color.<br>
+- Changes in vision.<br>
+- Dizziness or trouble with balance.<br>
+- Tingling in hands or feet.<br>
+- Easy bruising or bleeding.<br>
+- Unexplained weight loss.<br>
+- Unexplained tiredness.<br>
+- Sadness or depression.<br>
+- Rash.<br>
+- Joint pain.<br>
+
+It is important for you to list all drugs, dietary supplements or herbal remedies you take. You may need to stop taking some of these during your treatment.
+            </p>
+    </main>
+
+    <footer>
+        Made by Sreenath Vadlamudi
+    </footer>
+</body>
+</html>
