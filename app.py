@@ -53,7 +53,7 @@ def predict():
     os.remove(filepath)
 
     # Render the result on the results page
-    return render_template('result.html', result_message=prediction_label)
+    return render_template('about.html', result_message=prediction_label)
 
 if __name__ == '__main__':
     app.run(debug=True)
