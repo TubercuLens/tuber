@@ -31,29 +31,29 @@ def about():
 
 @app.route('/predict', method=['post'])
 def predict():
-    #if 'file' not in request.files:
-        #return render_template('index.html', result_message='No file uploaded')
+    if 'file' not in request.files:
+        return render_template('index.html', result_message='No file uploaded')
     
-    #file = request.files['file']
-    #if file.filename == '':
-        #return render_template('index.html', result_message='No file selected')
+    file = request.files['file']
+    if file.filename == '':
+        return render_template('index.html', result_message='No file selected')
 
     # Save the file
-    #filepath = os.path.join('uploads', file.filename)
-    #file.save(filepath)
+    filepath = os.path.join('uploads', file.filename)
+    file.save(filepath)
 
     # Prepare the image
-    #img_array = prepare_image(filepath)
+    img_array = prepare_image(filepath)
 
     # Make prediction
-    #prediction = model.predict(img_array)
-    #prediction_label = 'positive' if prediction[0][0] > 0.5 else 'normal'
+    prediction = model.predict(img_array)
+    prediction_label = 'positive' if prediction[0][0] > 0.5 else 'normal'
 
     # Remove the file after prediction
-    #os.remove(filepath)
+    os.remove(filepath)
 
     # Render the result on the results page    result_message=prediction_label
-    return render_template('result.html')
+    return render_template('result.html', result_message=prediction_label)
 
 if __name__ == '__main__':
     app.run(debug=True)
