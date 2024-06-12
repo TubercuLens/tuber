@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TubercuLens</title>
-    <link rel="stylesheet" type="text/css" href="templates/static/styles.css">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
 </head>
 <body>
     <header>
         <h1>TubercuLens</h1>
         <h5>Tuberculosis detection and analysis</h5>
-        <a href="about.html"  class="about-button">About</a>
+        <a href="/about" class="about-button">About</a>
     </header>
     
     <main>
         <section>
             <h2>Upload Pulmonary Chest X-Ray</h2>
-            <a href="result.html" class="about-button">Result</a>
             <form enctype="multipart/form-data" action="/predict" method="post">
                 <label for="file" class="custom-file-upload">Choose File</label>
                 <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" required>
                 <input type="submit" value="Upload" name="submit">
-               
             </form>
         </section>
 
