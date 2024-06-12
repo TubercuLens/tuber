@@ -29,7 +29,7 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['post'])
 def predict():
     if 'file' not in request.files:
         return render_template('index.html', result_message='No file uploaded')
