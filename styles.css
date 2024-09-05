@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+main {
+    margin: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+
+
+h2 {
+    padding-top: 1em;
+    text-align: center;
+    color: #000080;
+}
+
+form {
+    margin-top: 1em;
+    text-align: center;
+}
+
+
+input[type="file"] {
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    background-color: #000080;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    rsor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000080;
+
+
+}
+
+h3 {
+    margin-top: 10%;
+    color: #000080;
+}
+
+footer {
+    background-color: #000080;
+    margin-top: 12%;
+    color: antiquewhite;
+    padding: 1em;
+}
+
+.igra-footer {
+    margin-top: 35%;
+}
+
+
+
+.about-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.about-button:hover {
+    background-color: #fff;
+    color: #000080;
+}
+
+
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #fff;
+    color: #000080;
+}
+
+
+.igra-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 0.1px;
+    margin-right: 1000px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.sideimg {
+
+    padding-left: 70%;
+    padding-right: 0%;
+    size: 5px;
+    height: 50px;    
+}
+
+
+.igra {
+    text-align: left;
+    margin-top: 2%;
+}
+
+
+/* Your existing CSS ... */
+
+.igra-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.igra-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.igra-content a {
+    color: #000080;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.igra-content a:hover {
+    background-color: #000080;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.igra-dropdown:hover .igra-content {
+
+    display: block;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 0.5em;
+    }
+    main {
+        margin: 1em;
+    }
+    section {
+        margin-bottom: 1em;
+    }
+    h2, h3 {
+        font-size: 1.2em;
+    }
+    footer {
+        margin-top: 5%;
+    }
+}
