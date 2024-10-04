@@ -11,12 +11,16 @@
     <header>
         <h1>TubercuLens</h1>
         <h5>Tuberculosis detection & analysis</h5>
-        <a href="/about" class="about-button">About</a>
+        <a href="#" class="about-button">Home</a>
+        <a href="about.html" class="about-button">About</a>
+        <a href="documentation.html" class="about-button">Documentation</a>
+        <a href="blog.html" class="about-button">Blog</a>
+        <a href="contact.html" class="about-button">Contact Us</a>
     </header>
     
     <main>
         <section>
-            <h2>Upload Pulmonary Chest X-Ray</h2>
+            <h2 class="pulmo">Upload Pulmonary Chest X-Ray</h2>
             <form enctype="multipart/form-data" action="/predict" method="post">
                 <label for="file" class="custom-file-upload">Choose File</label>
                 <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" required>
@@ -24,12 +28,6 @@
             </form>
         </section>
 
-        <section>
-            {% if result_message %}
-                <h3>Results:</h3>
-                <p>{{ result_message }}</p>
-            {% endif %}
-        </section>
 
         <section class="igra">
             <h2 class="igra">Interferon-Gamma Release Assays (IGRAs) – Blood Tests for TB Infection</h2>
@@ -74,7 +72,7 @@
             A sample of blood is sent to a lab. One lab test finds out whether certain immune system cells can "recognize" tuberculosis. A positive test shows that you have either a latent TB infection or active TB disease. Other tests of the blood sample can help determine if you have active disease.
             A negative result means you likely do not have a TB infection.
         </p>
-        <a href="https://www.cdc.gov/tb/publications/factsheets/testing/igra.htm" target="_blank" class="about-button">IGRAs– Blood Tests for TB Infection Fact Sheet</a>
+        <a href="https://www.cdc.gov/tb/hcp/testing-diagnosis/interferon-gamma-release-assay.html?CDC_AAref_Val=https://www.cdc.gov/tb/publications/factsheets/testing/igra.htm " target="_blank" class="index-button">IGRAs– Blood Tests for TB Infection Fact Sheet</a>
 
         <h2>X-Ray</h2>
         <p>
