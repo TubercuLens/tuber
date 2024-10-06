@@ -1,0 +1,395 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+main {
+    margin: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+
+
+h2 {
+    padding-top: 1em;
+    text-align: left;
+    color: #000080;
+}
+
+.pulmo  {
+    padding-top: 1em;
+    text-align: center;
+    color: #000080;
+}
+
+form {
+    margin-top: 1em;
+    text-align: center;
+}
+
+
+input[type="file"] {
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    background-color: #000080;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000080;
+
+
+}
+
+h3 {
+    margin-top: 10%;
+    color: #000080;
+}
+
+footer {
+    background-color: #000080;
+    margin-top: 12%;
+    color: antiquewhite;
+    padding: 1em;
+}
+
+.igra-footer {
+    margin-top: 35%;
+}
+
+
+
+.about-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.about-button:hover {
+    background-color: #fff;
+    color: #000080;
+    transition: ease 0.3s;
+}
+
+
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #fff;
+    color: #000080;
+}
+
+
+.igra-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 0.1px;
+    margin-right: 1000px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.sideimg {
+
+    padding-left: 70%;
+    padding-right: 0%;
+    size: 5px;
+    height: 50px;    
+}
+
+
+.igra {
+    text-align: left;
+    margin-top: 2%;
+}
+
+
+/* Your existing CSS ... */
+
+.igra-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.igra-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.igra-content a {
+    color: #000080;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.igra-content a:hover {
+    background-color: #000080;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.igra-dropdown:hover .igra-content {
+
+    display: block;
+}
+
+
+
+/* blog page css */
+
+/* Blog card container */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 2em;
+}
+
+/* Individual blog card */
+.blog-card {
+    background-color: #f9f9f9;
+    border: 1px solid rgba(0, 0, 128, 0.2); /* Light border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+/* Blog card hover effect */
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 128, 0.2);
+}
+
+/* Image inside the blog card */
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #000080;
+}
+
+/* Blog content inside the card */
+.blog-content {
+    padding: 1em;
+}
+
+.blog-content h2 {
+    color: #000080;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.blog-content p {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #000080;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #fff;
+    color: #000080;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .blog-container {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
+
+    header {
+        padding: 0.5em;
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 0.5em;
+    }
+    main {
+        margin: 1em;
+    }
+    section {
+        margin-bottom: 1em;
+    }
+    h2, h3 {
+        font-size: 1.2em;
+    }
+    footer {
+        margin-top: 5%;
+    }
+}
+
+
+
+/* Contact Page Container */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 2em;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Information */
+.contact-info {
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 128, 0.2);
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    color: #000080;
+    margin-bottom: 0.5em;
+}
+
+.contact-info p {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.contact-details h3 {
+    color: #000080;
+    margin-bottom: 0.2em;
+}
+
+.contact-details a {
+    color: #000080;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 128, 0.2);
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    color: #000080;
+    margin-bottom: 1em;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #000080;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000080;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 0.5em;
+    }
+
+    footer {
+        margin-top: 2em;
+    }
+}
+
